@@ -63,66 +63,54 @@ export const Experience = () => {
           {/* Timeline line */}
           <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-black via-gray-400 to-black dark:from-white dark:via-gray-600 dark:to-white transform md:-translate-x-1/2"></div>
 
-          <div className="space-y-12">
+          <div className="space-y-8">
             {experiences.map((exp, index) => (
               <div
                 key={index}
-                className={`relative flex flex-col md:flex-row gap-8 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+                className={`relative flex flex-col md:flex-row gap-6 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
                   }`}
               >
                 {/* Timeline dot */}
                 <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 flex items-center justify-center">
-                  <div className="w-6 h-6 bg-black dark:bg-white rounded-full border-4 border-gray-50 dark:border-gray-900"></div>
+                  <div className="w-4 h-4 bg-black dark:bg-white rounded-full border-2 border-gray-50 dark:border-gray-900"></div>
                 </div>
 
                 {/* Experience card */}
-                <div className={`md:w-1/2 ${index % 2 === 0 ? 'md:pr-8' : 'md:pl-8'}`}>
-                  <div className="bg-white dark:bg-black p-8 rounded-2xl border-2 border-gray-200 dark:border-zinc-800 hover:border-black dark:hover:border-white transition-all duration-300 hover:transform hover:scale-105">
-                    <div className="flex items-start justify-between mb-4">
+                <div className={`md:w-1/2 ${index % 2 === 0 ? 'md:pr-6' : 'md:pl-6'}`}>
+                  <div className="group bg-gray-50 dark:bg-zinc-950 p-6 rounded-2xl border-2 border-gray-200 dark:border-zinc-800 hover:border-black dark:hover:border-white transition-all duration-300 hover:transform hover:scale-105">
+                    <div className="flex items-start gap-3 mb-4">
+                      <div className="text-gray-900 dark:text-white transform group-hover:scale-110 transition-transform duration-300">
+                        <Briefcase size={24} />
+                      </div>
                       <div className="flex-1">
-                        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+                        <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1">
                           {exp.role}
                         </h3>
                         <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400 mb-2">
-                          <Briefcase size={16} />
-                          <span className="font-semibold">{exp.company}</span>
+                          <span className="font-semibold text-sm">{exp.company}</span>
                         </div>
-                        <div className="flex flex-wrap gap-3 text-sm text-gray-500 dark:text-gray-500">
+                        <div className="flex flex-wrap gap-3 text-xs text-gray-500 dark:text-gray-500">
                           <div className="flex items-center gap-1">
-                            <Calendar size={14} />
+                            <Calendar size={12} />
                             {exp.period}
                           </div>
                           <div className="flex items-center gap-1">
-                            <MapPin size={14} />
+                            <MapPin size={12} />
                             {exp.location}
                           </div>
                         </div>
                       </div>
                     </div>
 
-                    <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
+                    <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed text-sm">
                       {exp.description}
                     </p>
 
-                    <div className="mb-4">
-                      <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">
-                        Key Achievements:
-                      </h4>
-                      <ul className="space-y-2">
-                        {exp.achievements.map((achievement, idx) => (
-                          <li key={idx} className="flex items-start text-sm text-gray-600 dark:text-gray-400">
-                            <span className="w-1.5 h-1.5 bg-black dark:bg-white rounded-full mr-3 mt-2"></span>
-                            <span>{achievement}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
                     <div className="flex flex-wrap gap-2">
-                      {exp.technologies.map((tech, idx) => (
+                      {exp.technologies.slice(0, 3).map((tech, idx) => (
                         <span
                           key={idx}
-                          className="px-3 py-1 text-xs font-semibold bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full border border-gray-300 dark:border-gray-700"
+                          className="px-2 py-1 text-xs font-semibold bg-white dark:bg-black text-gray-700 dark:text-gray-300 rounded-full border border-gray-300 dark:border-gray-700"
                         >
                           {tech}
                         </span>
