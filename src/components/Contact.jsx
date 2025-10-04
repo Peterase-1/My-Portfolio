@@ -84,8 +84,8 @@ export const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-gray-50 dark:bg-zinc-950">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="py-12 sm:py-20 bg-gray-50 dark:bg-zinc-950">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold mb-4">
             <span className="text-gray-900 dark:text-white">Get in </span>
@@ -111,12 +111,12 @@ export const Contact = () => {
               </p>
             </div>
 
-            <div className="space-y-4">
+            <div className="grid sm:grid-cols-2 gap-4">
               {contactInfo.map((info, index) => (
                 <a
                   key={index}
                   href={info.link}
-                  className="flex items-center gap-4 p-4 bg-white dark:bg-black rounded-xl border-2 border-gray-200 dark:border-zinc-800 hover:border-black dark:hover:border-white transition-all duration-200 group"
+                  className="flex items-center gap-3 p-3 bg-white dark:bg-black rounded-xl border-2 border-gray-200 dark:border-zinc-800 hover:border-black dark:hover:border-white transition-all duration-200 group"
                 >
                   <div className="p-3 bg-gray-100 dark:bg-gray-800 rounded-lg text-gray-900 dark:text-white group-hover:bg-black group-hover:text-white dark:group-hover:bg-white dark:group-hover:text-black transition-all duration-200">
                     {info.icon}
@@ -137,14 +137,14 @@ export const Contact = () => {
               <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-4">
                 Follow Me
               </h4>
-              <div className="flex gap-4">
+              <div className="flex flex-wrap gap-3">
                 {socialLinks.map((social, index) => (
                   <a
                     key={index}
                     href={social.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-4 bg-white dark:bg-black rounded-xl border-2 border-gray-200 dark:border-zinc-800 hover:border-black dark:hover:border-white text-gray-900 dark:text-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-200"
+                    className="p-3 bg-white dark:bg-black rounded-xl border-2 border-gray-200 dark:border-zinc-800 hover:border-black dark:hover:border-white text-gray-900 dark:text-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-200"
                     aria-label={social.label}
                   >
                     {social.icon}

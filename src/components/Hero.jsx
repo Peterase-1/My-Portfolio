@@ -5,7 +5,7 @@ export const Hero = () => {
     <section id="home" className="min-h-[80vh] flex items-center justify-center pt-20 relative overflow-hidden">
       <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-8 order-2 md:order-1">
             <div className="space-y-4">
