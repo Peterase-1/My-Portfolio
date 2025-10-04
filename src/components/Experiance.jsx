@@ -28,7 +28,7 @@ export const Experience = () => {
         'Improved code quality with comprehensive testing',
         'Collaborated with cross-functional teams',
       ],
-      technologies: ['React', 'PostgreSQL', 'Express', 'TypeScript'],
+      technologies: ['React', 'PostgreSQL', 'Express', 'JavaScript'],
     },
     {
       role: 'Frontend Developer',
@@ -66,9 +66,8 @@ export const Experience = () => {
             {experiences.map((exp, index) => (
               <div
                 key={index}
-                className={`relative flex flex-col md:flex-row gap-8 ${
-                  index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-                }`}
+                className={`relative flex flex-col md:flex-row gap-8 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+                  }`}
               >
                 <div className="md:w-1/2 flex justify-end">
                   {index % 2 === 0 && (

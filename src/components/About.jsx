@@ -12,7 +12,7 @@ export const About = () => {
     {
       icon: <Code2 size={32} />,
       title: 'Frontend Development',
-      description: 'React, TypeScript, Next.js, Tailwind CSS',
+      description: 'React, JavaScript, Next.js, Tailwind CSS',
     },
     {
       icon: <Server size={32} />,

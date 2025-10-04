@@ -44,7 +44,7 @@ export const Services = () => {
     { name: 'React & Next.js', level: 95 },
     { name: 'Node.js & Express', level: 90 },
     { name: 'MongoDB & PostgreSQL', level: 88 },
-    { name: 'TypeScript', level: 92 },
+    { name: 'JavaScript', level: 92 },
     { name: 'Tailwind CSS', level: 94 },
     { name: 'Git & DevOps', level: 85 },
   ];

@@ -25,7 +25,7 @@ export const Projects = () => {
       category: 'PERN Stack',
       description: 'Collaborative project management tool with drag-and-drop, team collaboration, and analytics.',
       image: 'https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['Next.js', 'PostgreSQL', 'TypeScript', 'Tailwind'],
+      technologies: ['Next.js', 'PostgreSQL', 'JavaScript', 'Tailwind'],
       liveLink: '#',
       githubLink: '#',
     },
