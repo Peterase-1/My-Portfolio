@@ -32,7 +32,7 @@ export const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-gray-50 dark:bg-gray-900">
+    <section id="about" className="py-20 bg-gray-50 dark:bg-zinc-950">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold mb-4">
@@ -71,7 +71,7 @@ export const About = () => {
               {stats.map((stat, index) => (
                 <div
                   key={index}
-                  className="bg-white dark:bg-black p-6 rounded-2xl border-2 border-gray-200 dark:border-gray-800 hover:border-black dark:hover:border-white transition-colors duration-200"
+                  className="bg-white dark:bg-black p-6 rounded-2xl border-2 border-gray-200 dark:border-zinc-800 hover:border-black dark:hover:border-white transition-colors duration-200"
                 >
                   <div className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
                     {stat.number}
@@ -89,7 +89,7 @@ export const About = () => {
           {expertise.map((item, index) => (
             <div
               key={index}
-              className="bg-white dark:bg-black p-8 rounded-2xl border-2 border-gray-200 dark:border-gray-800 hover:border-black dark:hover:border-white transition-all duration-200 hover:transform hover:scale-105"
+              className="bg-white dark:bg-black p-8 rounded-2xl border-2 border-gray-200 dark:border-zinc-800 hover:border-black dark:hover:border-white transition-all duration-200 hover:transform hover:scale-105"
             >
               <div className="text-gray-900 dark:text-white mb-4">
                 {item.icon}

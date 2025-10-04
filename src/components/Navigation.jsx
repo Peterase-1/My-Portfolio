@@ -22,11 +22,11 @@ export const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 w-full z-50 backdrop-blur-md bg-white/80 dark:bg-black/80 border-b border-gray-200 dark:border-gray-800">
+    <nav className="fixed top-0 w-full z-50 backdrop-blur-md bg-white/80 dark:bg-black/80 border-b border-gray-200 dark:border-zinc-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <div className="text-2xl font-bold bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-400 bg-clip-text text-transparent">
-            {'<Dev />'}
+          <div className="text-xl font-bold bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-400 bg-clip-text text-transparent" style={{ fontFamily: '"JetBrains Mono", "Fira Code", "Source Code Pro", "Consolas", "Monaco", monospace', letterSpacing: '0.1em', fontWeight: '600' }}>
+            Petros Asegid
           </div>
 
           <div className="hidden md:flex items-center space-x-8">
@@ -41,7 +41,7 @@ export const Navigation = () => {
             ))}
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+              className="p-2 rounded-lg bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 dark:hover:bg-zinc-700 transition-colors"
             >
               {isDark ? <Sun size={20} /> : <Moon size={20} />}
             </button>
@@ -50,7 +50,7 @@ export const Navigation = () => {
           <div className="md:hidden flex items-center space-x-4">
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800"
+              className="p-2 rounded-lg bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 dark:hover:bg-zinc-700 transition-colors"
             >
               {isDark ? <Sun size={20} /> : <Moon size={20} />}
             </button>
@@ -62,7 +62,7 @@ export const Navigation = () => {
       </div>
 
       {isOpen && (
-        <div className="md:hidden bg-white dark:bg-black border-t border-gray-200 dark:border-gray-800">
+        <div className="md:hidden bg-white dark:bg-black border-t border-gray-200 dark:border-zinc-800">
           <div className="px-4 py-4 space-y-3">
             {navLinks.map((link) => (
               <button

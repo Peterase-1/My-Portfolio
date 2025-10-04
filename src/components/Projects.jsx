@@ -78,7 +78,7 @@ export const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="group bg-gray-50 dark:bg-gray-900 rounded-2xl border-2 border-gray-200 dark:border-gray-800 hover:border-black dark:hover:border-white transition-all duration-300 overflow-hidden"
+              className="group bg-gray-50 dark:bg-zinc-950 rounded-2xl border-2 border-gray-200 dark:border-zinc-800 hover:border-black dark:hover:border-white transition-all duration-300 overflow-hidden"
             >
               <div className="relative h-56 overflow-hidden">
                 <img

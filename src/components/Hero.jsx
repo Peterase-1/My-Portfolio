@@ -2,16 +2,16 @@ import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
 
 export const Hero = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center pt-16 relative overflow-hidden">
+    <section id="home" className="min-h-[80vh] flex items-center justify-center pt-20 relative overflow-hidden">
       <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-8 order-2 md:order-1">
             <div className="space-y-4">
               <div className="inline-block">
-                <span className="text-sm font-semibold tracking-wider uppercase text-gray-600 dark:text-gray-400 border border-gray-300 dark:border-gray-700 px-4 py-2 rounded-full">
-                  Petros Asegid
+                <span className="text-sm font-semibold tracking-wider  text-gray-600 dark:text-gray-400 border border-gray-300 dark:border-gray-700 px-4 py-2 rounded-full">
+                  Hi, I'm Petros Asegid
                 </span>
               </div>
 
@@ -30,14 +30,46 @@ export const Hero = () => {
 
             <div className="flex flex-wrap gap-4">
               <button
-                onClick={() => document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' })}
-                className="px-8 py-4 bg-black dark:bg-white text-white dark:text-black font-semibold rounded-lg hover:scale-105 transition-transform duration-200"
+                type="button"
+                onClick={() => {
+                  console.log('View Projects button clicked!');
+                  const element = document.getElementById('projects');
+                  if (element) {
+                    console.log('Scrolling to projects section');
+                    element.scrollIntoView({ behavior: 'smooth' });
+                  } else {
+                    console.log('Projects section not found');
+                  }
+                }}
+                style={{
+                  cursor: 'pointer',
+                  pointerEvents: 'auto',
+                  zIndex: 10,
+                  position: 'relative'
+                }}
+                className="px-8 py-4 bg-black dark:bg-white text-white dark:text-black font-semibold rounded-lg hover:scale-105 transition-transform duration-200 hover:opacity-90"
               >
                 View Projects
               </button>
               <button
-                onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
-                className="px-8 py-4 border-2 border-black dark:border-white text-black dark:text-white font-semibold rounded-lg hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-200"
+                type="button"
+                onClick={() => {
+                  console.log('Get in Touch button clicked!');
+                  const element = document.getElementById('contact');
+                  if (element) {
+                    console.log('Scrolling to contact section');
+                    element.scrollIntoView({ behavior: 'smooth' });
+                  } else {
+                    console.log('Contact section not found');
+                  }
+                }}
+                style={{
+                  cursor: 'pointer',
+                  pointerEvents: 'auto',
+                  zIndex: 10,
+                  position: 'relative'
+                }}
+                className="px-8 py-4 border-2 border-black dark:border-white text-black dark:text-white font-semibold rounded-lg hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-200 hover:opacity-90"
               >
                 Get in Touch
               </button>
@@ -45,24 +77,48 @@ export const Hero = () => {
 
             <div className="flex items-center space-x-6 pt-4">
               <a
-                href="https://github.com"
+                href="https://github.com/pasegid"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 rounded-full border border-gray-300 dark:border-gray-700 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-200"
+                onClick={() => console.log('GitHub clicked')}
+                style={{
+                  cursor: 'pointer',
+                  pointerEvents: 'auto',
+                  zIndex: 10,
+                  position: 'relative'
+                }}
+                className="p-3 rounded-full border border-gray-300 dark:border-gray-700 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-200 hover:scale-110"
+                aria-label="GitHub Profile"
               >
                 <Github size={20} />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://linkedin.com/in/pasegid"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 rounded-full border border-gray-300 dark:border-gray-700 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-200"
+                onClick={() => console.log('LinkedIn clicked')}
+                style={{
+                  cursor: 'pointer',
+                  pointerEvents: 'auto',
+                  zIndex: 10,
+                  position: 'relative'
+                }}
+                className="p-3 rounded-full border border-gray-300 dark:border-gray-700 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-200 hover:scale-110"
+                aria-label="LinkedIn Profile"
               >
                 <Linkedin size={20} />
               </a>
               <a
-                href="mailto:your@email.com"
-                className="p-3 rounded-full border border-gray-300 dark:border-gray-700 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-200"
+                href="mailto:pasegid@gmail.com"
+                onClick={() => console.log('Email clicked')}
+                style={{
+                  cursor: 'pointer',
+                  pointerEvents: 'auto',
+                  zIndex: 10,
+                  position: 'relative'
+                }}
+                className="p-3 rounded-full border border-gray-300 dark:border-gray-700 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-200 hover:scale-110"
+                aria-label="Send Email"
               >
                 <Mail size={20} />
               </a>
@@ -99,17 +155,14 @@ export const Hero = () => {
                 <circle cx="50" cy="50" r="25" fill="none" stroke="currentColor" strokeWidth="2" className="text-gray-400 dark:text-gray-600" />
               </svg>
 
-              {/* Photo container - no border */}
+              {/* Professional working image */}
               <div className="relative z-10 aspect-[3/4] max-w-md mx-auto">
-                <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-900 dark:to-gray-800 rounded-3xl transform rotate-3 opacity-50"></div>
-                <div className="relative w-full h-full flex items-center justify-center">
-                  <div className="w-full h-full flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="text-8xl font-bold text-gray-300 dark:text-gray-700 mb-2">P</div>
-                      <p className="text-sm text-gray-500 dark:text-gray-500">Your borderless photo here</p>
-                      <p className="text-xs text-gray-400 dark:text-gray-600 mt-2">Place your cutout photo with transparent background</p>
-                    </div>
-                  </div>
+                <div className="relative w-full h-full">
+                  <img
+                    src="/src/assets/pngegg.png"
+                    alt="Professional developer working on laptop"
+                    className="w-full h-full object-contain"
+                  />
                 </div>
               </div>
 
@@ -128,10 +181,6 @@ export const Hero = () => {
             </div>
           </div>
         </div>
-      </div>
-
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <ArrowDown className="text-gray-400" size={32} />
       </div>
     </section>
   );
