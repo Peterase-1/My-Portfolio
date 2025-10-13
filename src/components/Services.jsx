@@ -20,7 +20,7 @@ export const Services = () => {
       icon: <Zap size={40} />,
       title: 'API Development',
       description: 'Robust and scalable API architecture with comprehensive documentation and testing.',
-      features: ['REST APIs', 'GraphQL', 'Authentication', 'Rate Limiting'],
+      features: ['REST APIs', 'Authentication', 'Rate Limiting', 'API Documentation'],
       technologies: ['Express', 'Node.js', 'JWT', 'MongoDB', 'PostgreSQL']
     },
   ];

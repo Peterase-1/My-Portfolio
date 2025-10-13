@@ -3,46 +3,64 @@ import { Briefcase, Calendar, MapPin } from 'lucide-react';
 export const Experience = () => {
   const experiences = [
     {
-      role: 'Senior Full Stack Developer',
-      company: 'Tech Innovations Inc.',
+      role: 'Software Development Engineer',
+      company: 'Bluestock FinTech',
       location: 'Remote',
-      period: '2022 - Present',
-      description: 'Leading development of enterprise-scale applications using MERN stack, mentoring junior developers, and architecting scalable solutions.',
+      period: '2025-09 - Present',
+      type: 'Internship',
+      description: 'Developing financial technology solutions and contributing to fintech applications using modern web technologies.',
       achievements: [
-        'Architected and deployed 10+ full-stack applications',
-        'Reduced application load time by 60% through optimization',
-        'Implemented CI/CD pipelines reducing deployment time by 40%',
-        'Mentored 5+ junior developers in modern web technologies',
+        'Working on financial technology projects',
+        'Implementing secure payment solutions',
+        'Collaborating with fintech development team',
+        'Learning industry best practices',
       ],
-      technologies: ['React', 'Node.js', 'MongoDB', 'AWS', 'Docker'],
+      technologies: ['React', 'Node.js', 'Firebase', 'JavaScript', 'FinTech'],
     },
     {
-      role: 'Full Stack Developer',
-      company: 'Digital Solutions Ltd.',
-      location: 'Hybrid',
-      period: '2020 - 2022',
-      description: 'Developed and maintained multiple client projects using PERN stack, focusing on performance and user experience.',
+      role: 'Full Stack Web Developer',
+      company: 'Future Interns',
+      location: 'Remote',
+      period: '2025-10 - Present',
+      type: 'Internship',
+      description: 'Building full-stack web applications and gaining hands-on experience with modern development practices.',
       achievements: [
-        'Built 15+ responsive web applications from scratch',
-        'Integrated third-party APIs and payment gateways',
-        'Improved code quality with comprehensive testing',
-        'Collaborated with cross-functional teams',
+        'Developing full-stack applications',
+        'Working with modern frameworks',
+        'Implementing responsive designs',
+        'Learning industry standards',
       ],
-      technologies: ['React', 'PostgreSQL', 'Express', 'JavaScript'],
+      technologies: ['React', 'Node.js', 'MongoDB', 'Express', 'JavaScript'],
     },
     {
-      role: 'Frontend Developer',
-      company: 'Creative Web Agency',
-      location: 'On-site',
-      period: '2019 - 2020',
-      description: 'Created pixel-perfect, responsive user interfaces and collaborated with designers to bring creative visions to life.',
+      role: 'Front End Developer',
+      company: 'Codveda Technologies',
+      location: 'Remote',
+      period: '08-2025 - Present',
+      type: 'Internship',
+      description: 'Creating responsive user interfaces and implementing frontend solutions for various client projects.',
       achievements: [
-        'Developed 20+ landing pages and web interfaces',
-        'Implemented animations and micro-interactions',
-        'Ensured cross-browser compatibility',
-        'Achieved 98% client satisfaction rate',
+        'Developing responsive web interfaces',
+        'Implementing modern UI/UX designs',
+        'Working with React.js and modern frameworks',
+        'Ensuring cross-browser compatibility',
       ],
-      technologies: ['React', 'JavaScript', 'CSS3', 'Figma'],
+      technologies: ['React', 'JavaScript', 'CSS3', 'Tailwind CSS', 'Bootstrap'],
+    },
+    {
+      role: 'Campus Ambassador',
+      company: 'Eduveda Academy',
+      location: 'Remote',
+      period: '08-2025 - Present',
+      type: 'Internship',
+      description: 'Representing the academy on campus and promoting educational programs while gaining leadership experience.',
+      achievements: [
+        'Promoting educational programs',
+        'Building campus community',
+        'Organizing educational events',
+        'Developing leadership skills',
+      ],
+      technologies: ['Leadership', 'Communication', 'Event Management', 'Community Building'],
     },
   ];
 
@@ -97,6 +115,9 @@ export const Experience = () => {
                           <div className="flex items-center gap-1">
                             <MapPin size={12} />
                             {exp.location}
+                          </div>
+                          <div className="text-xs font-semibold text-gray-700 dark:text-gray-300">
+                            {exp.type}
                           </div>
                         </div>
                       </div>

@@ -1,4 +1,4 @@
-import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
+import { ArrowDown, Github, Linkedin, Mail, Download } from 'lucide-react';
 
 export const Hero = () => {
   return (
@@ -72,6 +72,26 @@ export const Hero = () => {
                 className="px-8 py-4 border-2 border-black dark:border-white text-black dark:text-white font-semibold rounded-lg hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-200 hover:opacity-90"
               >
                 Get in Touch
+              </button>
+              <button
+                type="button"
+                onClick={() => {
+                  console.log('Download Resume button clicked!');
+                  // Add your resume download logic here
+                  // For now, this will just log to console
+                  // You can replace this with actual download functionality
+                }}
+                style={{
+                  cursor: 'pointer',
+                  pointerEvents: 'auto',
+                  zIndex: 10,
+                  position: 'relative'
+                }}
+                className="p-3 rounded-full border border-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-200 hover:scale-110"
+                title="Download Resume"
+                aria-label="Download Resume"
+              >
+                <Download size={20} />
               </button>
             </div>
 

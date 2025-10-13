@@ -2,27 +2,27 @@ import { Code2, Database, Server, Sparkles } from 'lucide-react';
 
 export const About = () => {
   const stats = [
-    { number: '50+', label: 'Projects Completed' },
-    { number: '5+', label: 'Years Experience' },
+    { number: '10+', label: 'Projects Completed' },
+    { number: '2.5+', label: 'Years Experience' },
+    { number: '3rd Year', label: 'Computer Science Student' },
     { number: '100%', label: 'Client Satisfaction' },
-    { number: '24/7', label: 'Support Available' },
   ];
 
   const expertise = [
     {
       icon: <Code2 size={32} />,
       title: 'Frontend Development',
-      description: 'React, JavaScript, Next.js, Tailwind CSS',
+      description: 'React.js, Tailwind CSS, Bootstrap',
     },
     {
       icon: <Server size={32} />,
       title: 'Backend Development',
-      description: 'Node.js, Express, RESTful APIs',
+      description: 'Firebase, Node.js, Express, RESTful APIs',
     },
     {
       icon: <Database size={32} />,
       title: 'Database Management',
-      description: 'MongoDB, PostgreSQL, Supabase',
+      description: 'MongoDB, PostgreSQL, MySQL',
     },
     {
       icon: <Sparkles size={32} />,
@@ -50,17 +50,17 @@ export const About = () => {
               <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-black to-gray-400 dark:from-white dark:to-gray-600"></div>
               <div className="pl-8">
                 <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">
-                  Passionate Full Stack Developer
+                  Full Stack Web Developer | CS Student
                 </h3>
                 <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
-                  With expertise in both MERN and PERN stacks, I specialize in building
-                  scalable web applications that deliver exceptional user experiences.
-                  My approach combines technical excellence with creative problem-solving.
+                  Hi, I'm <strong>Petros Asegid</strong>, a passionate 3rd year Computer Science student with 2.5+ years of experience
+                  in full-stack development. I specialize in building scalable web applications using
+                  modern technologies like React.js, Firebase, and various databases.
                 </p>
                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                  I believe in writing clean, maintainable code and staying updated with
-                  the latest technologies to deliver cutting-edge solutions that drive
-                  business growth and user engagement.
+                  With 10+ projects completed, I combine academic knowledge with practical experience
+                  to deliver innovative solutions. I'm always learning and staying updated with the
+                  latest technologies to create cutting-edge applications.
                 </p>
               </div>
             </div>
