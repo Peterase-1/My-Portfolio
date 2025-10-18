@@ -6,7 +6,7 @@ export const Projects = () => {
       title: 'EthioHeritage 360',
       category: 'Tourism Platform',
       description: 'Ethiopia\'s comprehensive tourism ecosystem platform showcasing cultural heritage, historical sites, and travel experiences.',
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop',
+      image: '/Ethio360.png',
       technologies: ['React', 'Node.js', 'MongoDB', 'Tourism API'],
       liveLink: '#',
       githubLink: '#',
