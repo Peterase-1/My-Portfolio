@@ -171,7 +171,7 @@ export const Contact = () => {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 bg-gray-50 dark:bg-zinc-950 border-2 border-gray-200 dark:border-zinc-800 rounded-lg focus:border-black dark:focus:border-white focus:outline-none transition-colors text-gray-900 dark:text-white"
-                  placeholder="John Doe"
+                  placeholder="Alemayehu Tesfaye"
                 />
               </div>
 
