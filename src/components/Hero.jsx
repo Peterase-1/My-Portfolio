@@ -78,7 +78,7 @@ export const Hero = () => {
                 onClick={() => {
                   console.log('Download Resume button clicked!');
                   // Open Google Drive link in new tab to download resume
-                  window.open('https://drive.google.com/file/d/15MzV4yds9dW3ZNQN6RtDO5NPhaLpzk4o/view?usp=drive_link', '_blank');
+                  window.open('https://drive.google.com/file/d/1pO7v_TMrME4FHf3CWPujthLGhCCvch7h/view?usp=drive_link', '_blank');
                 }}
                 style={{
                   cursor: 'pointer',
