@@ -179,7 +179,7 @@ export const Hero = () => {
               <div className="relative z-10 aspect-[3/4] max-w-md mx-auto">
                 <div className="relative w-full h-full">
                   <img
-                    src="/src/assets/pngegg.png"
+                    src="/hero-image.png"
                     alt="Professional developer working on laptop"
                     className="w-full h-full object-contain"
                   />
