@@ -77,9 +77,8 @@ export const Hero = () => {
                 type="button"
                 onClick={() => {
                   console.log('Download Resume button clicked!');
-                  // Add your resume download logic here
-                  // For now, this will just log to console
-                  // You can replace this with actual download functionality
+                  // Open Google Drive link in new tab to download resume
+                  window.open('https://drive.google.com/file/d/15MzV4yds9dW3ZNQN6RtDO5NPhaLpzk4o/view?usp=drive_link', '_blank');
                 }}
                 style={{
                   cursor: 'pointer',
@@ -87,7 +86,7 @@ export const Hero = () => {
                   zIndex: 10,
                   position: 'relative'
                 }}
-                className="p-3 rounded-full border border-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-200 hover:scale-110"
+                className="p-3 rounded-full border border-gray-300 dark:border-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-200 hover:scale-110"
                 title="Download Resume"
                 aria-label="Download Resume"
               >
