@@ -8,10 +8,45 @@ export const Contact = () => {
     subject: '',
     message: '',
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    setIsSubmitting(true);
+    setSubmitStatus('');
+
+    try {
+      // Create mailto link with form data
+      const subject = encodeURIComponent(formData.subject);
+      const body = encodeURIComponent(
+        `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+      );
+
+      // Open email client with pre-filled data
+      const mailtoLink = `mailto:pasegid@gmail.com?subject=${subject}&body=${body}`;
+      window.open(mailtoLink, '_blank');
+
+      // Show success message
+      setSubmitStatus('success');
+
+      // Reset form after a short delay
+      setTimeout(() => {
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          message: '',
+        });
+        setSubmitStatus('');
+      }, 2000);
+
+    } catch (error) {
+      setSubmitStatus('error');
+      console.error('Error submitting form:', error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e) => {
@@ -46,12 +81,12 @@ export const Contact = () => {
     {
       icon: <Github size={24} />,
       label: 'GitHub',
-      link: 'https://github.com',
+      link: 'https://github.com/Peterase-1',
     },
     {
       icon: <Linkedin size={24} />,
       label: 'LinkedIn',
-      link: 'https://linkedin.com',
+      link: 'https://www.linkedin.com/in/petros-asegid-4454a931a',
     },
     {
       icon: (
@@ -60,7 +95,7 @@ export const Contact = () => {
         </svg>
       ),
       label: 'Telegram',
-      link: 'https://t.me/pasegid',
+      link: 'https://t.me/ABCD2586',
     },
     {
       icon: <Instagram size={24} />,
@@ -234,11 +269,40 @@ export const Contact = () => {
 
               <button
                 type="submit"
-                className="w-full px-8 py-4 bg-black dark:bg-white text-white dark:text-black font-semibold rounded-lg hover:scale-105 transition-transform duration-200 flex items-center justify-center gap-2"
+                disabled={isSubmitting}
+                className={`w-full px-8 py-4 font-semibold rounded-lg transition-all duration-200 flex items-center justify-center gap-2 ${isSubmitting
+                    ? 'bg-gray-400 dark:bg-gray-600 text-gray-200 dark:text-gray-400 cursor-not-allowed'
+                    : 'bg-black dark:bg-white text-white dark:text-black hover:scale-105'
+                  }`}
               >
-                Send Message
-                <Send size={20} />
+                {isSubmitting ? (
+                  <>
+                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white dark:border-black"></div>
+                    Opening Email Client...
+                  </>
+                ) : (
+                  <>
+                    Send Message
+                    <Send size={20} />
+                  </>
+                )}
               </button>
+
+              {submitStatus === 'success' && (
+                <div className="mt-4 p-3 bg-green-100 dark:bg-green-900 border border-green-300 dark:border-green-700 rounded-lg">
+                  <p className="text-green-800 dark:text-green-200 text-sm">
+                    ✅ Your email client should open with the message pre-filled. Please send the email to complete your message.
+                  </p>
+                </div>
+              )}
+
+              {submitStatus === 'error' && (
+                <div className="mt-4 p-3 bg-red-100 dark:bg-red-900 border border-red-300 dark:border-red-700 rounded-lg">
+                  <p className="text-red-800 dark:text-red-200 text-sm">
+                    ❌ There was an error opening your email client. Please try again or contact me directly at pasegid@gmail.com
+                  </p>
+                </div>
+              )}
             </form>
           </div>
         </div>

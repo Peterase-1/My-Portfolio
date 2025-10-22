@@ -1,4 +1,4 @@
-import { ArrowDown, Github, Linkedin, Mail, Download } from 'lucide-react';
+import { ArrowDown, Github, Linkedin, Mail, Download, MessageCircle, Phone } from 'lucide-react';
 
 export const Hero = () => {
   return (
@@ -77,8 +77,13 @@ export const Hero = () => {
                 type="button"
                 onClick={() => {
                   console.log('Download Resume button clicked!');
-                  // Open Google Drive link in new tab to download resume
-                  window.open('https://drive.google.com/file/d/1pO7v_TMrME4FHf3CWPujthLGhCCvch7h/view?usp=drive_link', '_blank');
+                  // Download resume from public folder
+                  const link = document.createElement('a');
+                  link.href = '/Petros Asegid Resume.pdf';
+                  link.download = 'Petros Asegid Resume.pdf';
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
                 }}
                 style={{
                   cursor: 'pointer',
@@ -96,7 +101,7 @@ export const Hero = () => {
 
             <div className="flex items-center space-x-6 pt-4">
               <a
-                href="https://github.com/pasegid"
+                href="https://github.com/Peterase-1"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => console.log('GitHub clicked')}
@@ -112,7 +117,7 @@ export const Hero = () => {
                 <Github size={20} />
               </a>
               <a
-                href="https://linkedin.com/in/pasegid"
+                href="https://www.linkedin.com/in/petros-asegid-4454a931a"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => console.log('LinkedIn clicked')}
@@ -140,6 +145,38 @@ export const Hero = () => {
                 aria-label="Send Email"
               >
                 <Mail size={20} />
+              </a>
+              <a
+                href="https://t.me/ABCD2586"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => console.log('Telegram clicked')}
+                style={{
+                  cursor: 'pointer',
+                  pointerEvents: 'auto',
+                  zIndex: 10,
+                  position: 'relative'
+                }}
+                className="p-3 rounded-full border border-gray-300 dark:border-gray-700 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-200 hover:scale-110"
+                aria-label="Telegram"
+              >
+                <MessageCircle size={20} />
+              </a>
+              <a
+                href="https://wa.me/251945801419"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => console.log('WhatsApp clicked')}
+                style={{
+                  cursor: 'pointer',
+                  pointerEvents: 'auto',
+                  zIndex: 10,
+                  position: 'relative'
+                }}
+                className="p-3 rounded-full border border-gray-300 dark:border-gray-700 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-200 hover:scale-110"
+                aria-label="WhatsApp"
+              >
+                <Phone size={20} />
               </a>
             </div>
           </div>

@@ -8,8 +8,8 @@ export const Projects = () => {
       description: 'Ethiopia\'s comprehensive tourism ecosystem platform showcasing cultural heritage, historical sites, and travel experiences.',
       image: '/Ethio360.png',
       technologies: ['React', 'Node.js', 'MongoDB', 'Tourism API'],
-      liveLink: '#',
-      githubLink: '#',
+      liveLink: 'https://ethioheritage360-ethiopianheritagepf.netlify.app/',
+      githubLink: 'https://github.com/Peterase-1',
     },
     {
       title: 'Yotor Local Furniture E-Commerce',
@@ -17,8 +17,8 @@ export const Projects = () => {
       description: 'Ethiopian craftsmanship meets modern design - handcrafted furniture e-commerce platform with custom design services, product management, and sustainable sourcing.',
       image: '/yotor-homepage.png',
       technologies: ['React', 'Express', 'PostgreSQL', 'Payment Gateway'],
-      liveLink: '#',
-      githubLink: '#',
+      liveLink: 'https://yotorfurniture.netlify.app/',
+      githubLink: 'https://github.com/Peterase-1',
     },
     {
       title: 'Campus Sync',
@@ -26,8 +26,8 @@ export const Projects = () => {
       description: 'Your complete student life manager - track habits, manage finances, organize studies, and achieve goals in one beautiful platform designed specifically for students.',
       image: '/campus-sync.png',
       technologies: ['Next.js', 'PostgreSQL', 'JavaScript', 'Tailwind'],
-      liveLink: '#',
-      githubLink: '#',
+      liveLink: 'https://campus-sync-campus-life-manager.netlify.app/',
+      githubLink: 'https://github.com/Peterase-1',
     },
     {
       title: 'NexusLab Solutions',
@@ -35,8 +35,8 @@ export const Projects = () => {
       description: 'Building the future of tech - crafting cutting-edge software solutions, AI-powered applications, and scalable cloud architectures that transform businesses and drive digital innovation.',
       image: '/nexus-lab.png',
       technologies: ['React', 'Node.js', 'AI/ML', 'Cloud Architecture'],
-      liveLink: '#',
-      githubLink: '#',
+      liveLink: 'https://nexus-lab-solutions.netlify.app/',
+      githubLink: 'https://github.com/Peterase-1',
     },
     {
       title: 'Luminary Fast Foods',
@@ -44,8 +44,8 @@ export const Projects = () => {
       description: 'Fresh ingredients, exceptional taste - premium fast food platform emphasizing quality ingredients, fresh preparation, and delicious dining experience.',
       image: '/luminary-fast-foods.png',
       technologies: ['React', 'Node.js', 'Fresh Ingredients', 'Food Quality'],
-      liveLink: '#',
-      githubLink: '#',
+      liveLink: 'https://luminay-foods.netlify.app/',
+      githubLink: 'https://github.com/Peterase-1',
     },
     {
       title: 'Company Registration Module',
@@ -53,8 +53,8 @@ export const Projects = () => {
       description: 'Digital company registration system with document management, approval workflows, and compliance tracking.',
       image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop',
       technologies: ['React', 'Node.js', 'Document Management', 'Workflow'],
-      liveLink: '#',
-      githubLink: '#',
+      liveLink: 'https://job-portal-client-seven-pi.vercel.app/',
+      githubLink: 'https://github.com/Peterase-1',
     },
   ];
 
@@ -140,7 +140,7 @@ export const Projects = () => {
 
         <div className="text-center mt-12">
           <a
-            href="https://github.com"
+            href="https://github.com/Peterase-1"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-8 py-4 bg-black dark:bg-white text-white dark:text-black font-semibold rounded-lg hover:scale-105 transition-transform duration-200"

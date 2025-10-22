@@ -5,7 +5,7 @@ export const About = () => {
     { number: '10+', label: 'Projects Completed' },
     { number: '2.5+', label: 'Years Experience' },
     { number: '3rd Year', label: 'Computer Science Student' },
-    { number: '100%', label: 'Client Satisfaction' },
+    { number: 'Actively', label: 'Working' },
   ];
 
   const expertise = [
@@ -22,7 +22,7 @@ export const About = () => {
     {
       icon: <Database size={32} />,
       title: 'Database Management',
-      description: 'MongoDB, PostgreSQL, MySQL',
+      description: 'MongoDB, PostgreSQL, Redis',
     },
     {
       icon: <Sparkles size={32} />,

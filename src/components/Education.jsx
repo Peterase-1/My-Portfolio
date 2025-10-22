@@ -7,7 +7,7 @@ export const Education = () => {
       title: 'INSA Summer Camp',
       provider: 'INSA',
       duration: 'Summer Program',
-      date: '2024',
+      date: '2025',
       description: 'Intensive summer training program covering advanced software development concepts and modern technologies.',
       skills: ['Software Development', 'Programming', 'Team Collaboration', 'Project Management'],
       type: 'Summer Camp'
@@ -16,7 +16,7 @@ export const Education = () => {
       title: 'Software Development Scholarship',
       provider: 'PLP Academy',
       duration: 'Scholarship Program',
-      date: '2024',
+      date: '2025',
       description: 'Comprehensive scholarship program focused on full-stack software development and industry best practices.',
       skills: ['Full Stack Development', 'Web Technologies', 'Database Design', 'API Development'],
       type: 'Scholarship Program'
